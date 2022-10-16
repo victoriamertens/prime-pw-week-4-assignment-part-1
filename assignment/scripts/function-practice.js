@@ -38,8 +38,8 @@ function isPositive(number) {
     return false;
   } //end else statement
 } //end function
-console.log(isPositive(10));
-console.log(isPositive(-2));
+console.log('Should read true:', isPositive(10));
+console.log('Should read false:', isPositive(-2));
 
 // Call the function to test each outcome (true & false)
 // Write a separate console.log statement for each outcome
@@ -63,12 +63,12 @@ console.log('should read undefined:', getLast([]));
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
 function find(value, array) {
-  for (let index = 0; index < array.length; index++)
+  for (let index = 0; index < array.length; index++) {
     if (array[index] === value) {
       return true;
-    } else {
-      return false;
     }
+  }
+  return false;
 }
 console.log('should read true:', find(5, [1, 2, 3, 4, 5]));
 console.log('should read false:', find(10, [1, 2, 3, 4, 5]));
